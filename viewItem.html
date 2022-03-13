@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1804116992038096"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Item</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+  <script src="./js/view.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color: black;" onload="updateValue()">
+    <div class="container-fluid row" style="margin-top: 100px;">
+        <div class="col-md-6">
+            <img src="./assets/boys-clothing/BHSTK11.png" id="image" class="img img-thumbnail rounded img-fluid" style="width: 400px;">
+        </div>
+        <div class="col-md-6">
+            <h1 class="p-3 mb-2 bg-light text-dark text-center" id="name" style="font-family: 'Kanit', sans-serif;">Item Name</h1>
+            <h1 class="p-3 mb-2 bg-light text-dark text-center" style="font-family: 'Kanit', sans-serif;" id="code">Item Name</h1>
+            <h1 class="p-3 mb-2 bg-light text-dark text-center" style="font-family: 'Kanit', sans-serif; display: none;" id="code-raw">Item Name</h1>
+            <h1 class="p-3 mb-2 bg-light text-dark text-center h4" style="font-family: 'Kanit', sans-serif;">Quality Of The Image-99%</h1>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:99%"></div>
+              </div>
+              <br>
+              <p id="decp" class="bg-light lh-1" style="padding-top: 20px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; border-radius: 25px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi esse magni ipsam natus quibusdam ipsa autem labore doloremque ducimus iure. Amet doloremque ipsum consequatur dicta necessitatibus quos recusandae, sit perferendis quibusdam eligendi exercitationem placeat sed deleniti. Doloremque sequi possimus repellendus.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Order Now</button>
+        </div>
+    </div>
+    <!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Fill The Form To Order</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Email</span>
+          </div>
+          <input type="text" class="form-control" id="emailInputStart">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input type="text" class="form-control" id="emailInputEnd">
+        </div>
+        <button class="btn btn-success" onclick="orderNow()">ORDER NOW</button>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"  id="closeIt" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+<script>
+    const firebaseConfig = {
+  apiKey: "AIzaSyBE9TzLvkTyM-EptQc3c2Ane2g8RL3-MVU",
+  authDomain: "hstk-8f4d7.firebaseapp.com",
+  databaseURL: "https://hstk-8f4d7-default-rtdb.firebaseio.com",
+  projectId: "hstk-8f4d7",
+  storageBucket: "hstk-8f4d7.appspot.com",
+  messagingSenderId: "526012939431",
+  appId: "1:526012939431:web:04eb4c753fd12c7c756f82",
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+</html>
