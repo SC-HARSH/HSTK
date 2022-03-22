@@ -1,3 +1,5 @@
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 const firebaseConfig = {
   apiKey: "AIzaSyBE9TzLvkTyM-EptQc3c2Ane2g8RL3-MVU",
   authDomain: "hstk-8f4d7.firebaseapp.com",
