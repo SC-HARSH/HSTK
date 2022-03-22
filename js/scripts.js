@@ -1,4 +1,7 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener("contextmenu", function(event){
+event.preventDefault();
+alert('😉Right Click is Disabled😉');    
+}, false);
 
 const firebaseConfig = {
   apiKey: "AIzaSyBE9TzLvkTyM-EptQc3c2Ane2g8RL3-MVU",
